@@ -5,7 +5,7 @@ source("dataFileReader.R") # Functions for datafile
 
 df <- getElectricPowerDatasetWithFixedRange()
 
-png(file = "plot1.png", width=480, height = 480) 
+png(file = "plots//plot1.png", width=480, height = 480) 
 
 hist(df$Global_active_power, 
      col="red", 
