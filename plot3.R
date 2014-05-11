@@ -14,5 +14,6 @@ lines(df$Time, df$Sub_metering_2, col="red")
 lines(df$Time, df$Sub_metering_3, col="blue")
 legend("topright",legend=names(df)[7:9],
        col=c("black","red", "blue"),lty=1)
+
 dev.off()
 
