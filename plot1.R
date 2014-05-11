@@ -1,14 +1,16 @@
+# Cleanup
 rm(list=ls())
 
-source("helpers.R")
+source("dataFileReader.R") # Functions for datafile
 
-hpc.df <- getElectricPowerDataset()
+df <- getElectricPowerDatasetWithFixedRange()
 
-png(file = "plot1.png", width=480, height = 480, bg="transparent")
-with(df, hist(df$Global_active_power, 
-              col="red", 
-              xlab = "Global Active Power (kilowatts)", 
-              bg="transparent", 
-              main = "Global Active Power"))
+png(file = "plot1.png", width=480, height = 480) 
+
+hist(df$Global_active_power, 
+     col="red", 
+     xlab = "Global Active Power (kilowatts)", 
+     main = "Global Active Power")
+
 dev.off()
 
